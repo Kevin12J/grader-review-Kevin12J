@@ -11,6 +11,13 @@ echo 'Finished cloning'
 
 # Draw a picture/take notes on the directory structure that's set up after
 # getting to this point
-
+#-List-Examples-Greater
+#   |-lib
+#   |-grading-area
+#   |-student-submission
+#   |-grade.sh
+#   |-GradeServer.java
+#   |-Server.java
+#   |-TestListExamples.java
 # Then, add here code to compile and run, and do any post-processing of the
 # tests
