@@ -1,6 +1,23 @@
 JUnit version 4.13.2
-..
-Time: 0.004
+.E.E
+Time: 0.585
+There were 2 failures:
+1) testMergeRightEnd(TestListExamples)
+org.junit.runners.model.TestTimedOutException: test timed out after 500 milliseconds
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3512)
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3481)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:237)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:244)
+	at java.base/java.util.ArrayList.add(ArrayList.java:454)
+	at java.base/java.util.ArrayList.add(ArrayList.java:467)
+	at ListExamples.merge(ListExamples.java:42)
+	at TestListExamples.testMergeRightEnd(TestListExamples.java:43)
+2) testFilter(TestListExamples)
+org.junit.ComparisonFailure: expected:<[hello]> but was:<[rain]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at TestListExamples.testFilter(TestListExamples.java:34)
 
-OK (2 tests)
+FAILURES!!!
+Tests run: 2,  Failures: 2
 
