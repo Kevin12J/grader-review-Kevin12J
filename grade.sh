@@ -21,16 +21,19 @@ echo 'Finished cloning'
 #   |-TestListExamples.java
 # Then, add here code to compile and run, and do any post-processing of the
 # tests
-CODEPATH=$(find . -name ListExamples.java)
-if [[ -f $CODEPATH ]]
+# checking if correct files are submitted
+if [[ -f student-submission/ListExamples.java ]]
 then
-    echo "File Found"
-    cp $CODEPATH grading-area
-    cp TestListExamples.java grading-area
-else
-    echo "File Not Found"
-    exit 1
+  echo "File found"
+else 
+  echo "File not found"
+  exit
 fi
+
+# Moving files to grading-area
+cp -r student-submission/*.java grading-area
+cp -r lib grading-area
+cp -r TestListExamples.java grading-area
 
 cd grading-area
 CPATH='.:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar'
